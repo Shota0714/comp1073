@@ -44,3 +44,22 @@ const toyCar3 = {
 };
 
 output3.textContent = `This toy car is a ${toyCar3.year} ${toyCar3.brand} ${toyCar3.model} in ${toyCar3.color}. It is part of the ${toyCar3.series} series, made in ${toyCar3.country}.This car has a ${toyCar3.baseColor} ${toyCar3.baseType} base, ${toyCar3.windowColor} windows, and ${toyCar3.wheelType} wheels.`;
+
+function toyCar(brand, model, color, year, series, baseColor, baseType, windowColor, wheelType, country) {
+    this.brand = brand;
+    this.model = model;
+    this.color = color;
+    this.year = year;
+    this.series = series;
+    this.baseColor = baseColor;
+    this.baseType = baseType;
+    this.windowColor = windowColor;
+    this.wheelType = wheelType;
+    this.country = country;
+    this.describe = function() {
+        let description = `This toy car is a ${this.year} ${this.brand} ${this.model} in ${this.color}. It is part of the ${this.series} series, made in ${this.country}.This car has a ${this.baseColor} ${this.baseType} base, ${this.windowColor} windows, and ${this.wheelType} wheels.`;
+        return description;
+    };
+};
+
+output4.textContent = toyCar.describe();

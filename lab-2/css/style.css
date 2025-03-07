@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-html {
-    box-sizing: border-box;
-    background-image: url(../images/background-image.jpeg);
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
 body {
     text-align: center;
     display: block;
