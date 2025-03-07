@@ -13,4 +13,34 @@ const toyCar1 = {
     country: "Malaysia"
 };
 
-output.textContent = `This toy car is a ${toyCar1.year} ${toyCar1.brand} ${toyCar1.model} in ${toyCar1.color}. It is part of the ${toyCar1.series} series, made in ${toyCar1.country}.This car has a ${toyCar1.baseColor} ${toyCar1.baseType} base, ${toyCar1.windowColor} windows, and ${toyCar1.wheelType} wheels.`;
+output1.textContent = `This toy car is a ${toyCar1.year} ${toyCar1.brand} ${toyCar1.model} in ${toyCar1.color}. It is part of the ${toyCar1.series} series, made in ${toyCar1.country}.This car has a ${toyCar1.baseColor} ${toyCar1.baseType} base, ${toyCar1.windowColor} windows, and ${toyCar1.wheelType} wheels.`;
+
+const toyCar2 = {
+    brand: "Hot Wheels",
+    model: "BMW M3 GT2",
+    color: "Red",
+    year: 2021,
+    series: "HW Race Day",
+    baseColor: "Black",
+    baseType: "Plastic",
+    windowColor: "Tinted Smoke",
+    wheelType: "GRX89",
+    country: "Malaysia"
+};
+
+output2.textContent = `This toy car is a ${toyCar2.year} ${toyCar2.brand} ${toyCar2.model} in ${toyCar2.color}. It is part of the ${toyCar2.series} series, made in ${toyCar2.country}.This car has a ${toyCar2.baseColor} ${toyCar2.baseType} base, ${toyCar2.windowColor} windows, and ${toyCar2.wheelType} wheels.`;
+
+const toyCar3 = {
+    brand: "Hot Wheels",
+    model: "Automobili Pininfarina Battista",
+    color: "Bianco Sestriere",
+    year: 2023,
+    series: "HW Green Speed",
+    baseColor: "Black",
+    baseType: "Plastic",
+    windowColor: "Smoke Tint",
+    wheelType: "PR5",
+    country: "Malaysia"
+};
+
+output3.textContent = `This toy car is a ${toyCar3.year} ${toyCar3.brand} ${toyCar3.model} in ${toyCar3.color}. It is part of the ${toyCar3.series} series, made in ${toyCar3.country}.This car has a ${toyCar3.baseColor} ${toyCar3.baseType} base, ${toyCar3.windowColor} windows, and ${toyCar3.wheelType} wheels.`;
