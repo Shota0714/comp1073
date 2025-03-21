@@ -37,6 +37,29 @@
         "sea salt"
       ],
       "image" : "strawberry-sprinkle.svg"
+    },
+    {
+      "name" : "Pistachio Paradise",
+      "calories" : 300,
+      "type" : "ice cream",
+      "ingredients" : [
+        "pistachio nuts",
+        "pistachio flavoring",
+        "sugar"
+      ],
+      "image" : "icon-cream-xtra1.svg"
+    },
+    {
+      "name" : "Crazy Cookies $ Cream",
+      "calories" : 450,
+      "type" : "ice cream",
+      "ingredients" : [
+        "milk",
+        "chocolate chips",
+        "full fat cream",
+        "crushed cookies"
+      ],
+      "image" : "icon-cream-xtra2.svg"
     }
   ]
 }
