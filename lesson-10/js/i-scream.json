@@ -47,11 +47,7 @@
         "pistachio flavoring",
         "sugar"
       ],
-<<<<<<< HEAD
       "image" : "ice-cream-xtra1.svg"
-=======
-      "image" : "icon-cream-xtra1.svg"
->>>>>>> 1ad82f0 (added 2 more flavors)
     },
     {
       "name" : "Crazy Cookies $ Cream",
@@ -63,11 +59,7 @@
         "full fat cream",
         "crushed cookies"
       ],
-<<<<<<< HEAD
       "image" : "ice-cream-xtra2.svg"
-=======
-      "image" : "icon-cream-xtra2.svg"
->>>>>>> 1ad82f0 (added 2 more flavors)
     }
   ]
 }
