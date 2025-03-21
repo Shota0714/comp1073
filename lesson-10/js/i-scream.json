@@ -25,6 +25,18 @@
         "clover honey"
       ],
       "image" : "peach-mango.svg"
+    },
+    {
+      "name" : "Caramel Twist",
+      "calories" : 1200,
+      "type" : "ice cream",
+      "ingredients" : [
+        "real cream",
+        "heavy caramel",
+        "cane sugar",
+        "sea salt"
+      ],
+      "image" : "strawberry-sprinkle.svg"
     }
   ]
 }
