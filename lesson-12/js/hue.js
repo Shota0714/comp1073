@@ -12,10 +12,13 @@ STEP 3c: You will get a message in the Command Response: field consisting of JSO
 
 STEP 3d: Return to your seat, and click on the 'POST' button again - you will then get a JSON response in the Command Response: field containing your unique username - paste your username here (it is long):
 
+Zrmx4GfySVlJ5JcvtIGjmPFv8x39KuGCy6m5SZ4H
 
 STEP 4: Get information about your light
 
 STEP 4a: Update the URL: field to read http://192.168.1.41/api/[your-user-name]/lights/[your-light-number]
+
+http://192.168.1.41/api/Zrmx4GfySVlJ5JcvtIGjmPFv8x39KuGCy6m5SZ4H/lights/42
 
 STEP 4b: Clear out the Message Body: field and click on the 'GET' button - note the JSON response in the Command Response: field with information about your specific light
 
@@ -38,14 +41,15 @@ STEP 6: Try changing some of the JSON object values (saturation and brightness r
 // STEP 7: Open this file in a browser tab, then come back to this script and configure it to work for your particular light
 
 // STEP 7a: Add the URL for the bridge
-const bridge = "";
+const bridge = "http://192.168.1.41/api/";
 // STEP 7b: Add a constant for your specific username
-const user = "";
+const user = "Zrmx4GfySVlJ5JcvtIGjmPFv8x39KuGCy6m5SZ4H";
 // STEP 7c: Add another constant for your light number
-const lightNum = "";
+const lightNum = "42";
 // STEP 7d: Just like the debugger app that runs on the bridge, we need to choose a method to use to interact with the API - use 'put'
-let method = "";
+let method = "put";
 // STEP 7e: Build out the URL for the RESTful call to the API, combining the bridge URL, user, and lightNum - building out the correct path in the format http://192.168.0.0/api/[username]/lights/[lightNum]/state
+const url = `${bridge}${user}/lights/${lightNum}/state`;
 
 const html = document.querySelector('html');
 const hueSlider = document.getElementById("hue");
@@ -54,9 +58,9 @@ const hueSlider = document.getElementById("hue");
 hueSlider.addEventListener("change", function() {
 	var newHue = this.value * 1000;
 	updateScreenColor(newHue);
-	var commands = '{ "hue" : ' + newHue + ', "sat" : 254, "bri" : 254, "on" : true }';
+	let commands = '{ "hue" : ' + newHue + ', "sat" : 254, "bri" : 254, "on" : true }';
 	// STEP 9b: Invoke the completed updateLight() function when the hueSlider value changes
-	
+	updateLight(commands);
 }, false);
 
 // Function that changes the page color based on the value of the slider
@@ -68,10 +72,16 @@ function updateScreenColor(newHue){
 }
 
 // STEP 8: Function to update the hue light by passing JSON to the bridge
-
+async function updateLight(commands) {
 	// STEP 8a: Use the fetch() method
-	
+	let response = await fetch(url, {
+		method: method,
+		mode: "cors",
+		body: commands
+	}).then(response => response.json())
+	.then(response => console.log("Success: ", response))
+	.catch(error => console.warn("Error: ", error));
 	// STEP 8b: Chain .then after the fetch(), and collect the response from the server (bridge)
 	
-
+};
 // STEP 10: Look up the Philips Hue API to learn about other ways to work with the Hue lighting products - I hope you had fun!
