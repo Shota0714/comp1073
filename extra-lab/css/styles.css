@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+}
+
+.product-list {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+li {
+margin-bottom: 5px;
+}
+
+h2 {
+margin-top: 15px;
+}
